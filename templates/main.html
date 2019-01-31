@@ -27,9 +27,9 @@
 
     {# BODY #}
     <div class="row browse">
-      <div class="col-lg-2"></div>
+      <div class="col-lg-2 col-md-0"></div>
 
-      <div class="col-lg-8 icon-div" id="photo">
+      <div class="col-lg-8 col-md-12 icon-div" id="photo">
         <form method="post" enctype="multipart/form-data" action="/browse">
           {% csrf_token %}
 
@@ -346,7 +346,7 @@
 
       </div>
 
-      <div class="col-lg-2"></div>
+      <div class="col-lg-2 col-md-0"></div>
     </div>
 
     {# 결과 #}
@@ -358,20 +358,20 @@
 
             <!-- 만약 이미지가 정상적으로 업로드 되었다면  -->
             {% if uploaded_file_url %}
-            <div class="col-lg-2"></div>
+            <div class="col-lg-2 col-md-0"></div>
             {# 이미지 보여주기 #}
-            <div class="col-lg-4 div-ori-img">
+            <div class="col-lg-4 col-md-6 div-ori-img">
               <img id="ori-img" src='{{ uploaded_file_url }}' alt="" />
             </div>
 
             {# 결과 이미지 #}
-            <div class="col-lg-4 div-result-img">
+            <div class="col-lg-4 col-md-6 div-result-img">
               <img id="fwhr-img" src='{{fWHR_file_url}}' alt="fWHR Box" />
               <img id="lmrk-img" src='{{landmark_file_url}}' alt="Landmarks" />
             </div>
 
             {# change radio buttons #}
-            <div class="col-lg-2 change-btns">
+            <div class="col-lg-2 col-md-12 change-btns">
               {# fWHR 표시된 이미지 #}
               <label for="fwhr">
                 <input type="radio" name="view" value="fwhr" id="fwhr" /> fWHR box

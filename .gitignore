@@ -2,6 +2,9 @@
 *.jpg
 *.png
 *.jpeg
+.idea/
+__pycache__/
+*.sqlite3
 
 
 # Byte-compiled / optimized / DLL files
